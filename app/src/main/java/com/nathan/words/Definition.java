@@ -8,7 +8,7 @@ public class Definition {
 
     @Override
     public String toString() {
-        return "Definition{"+
+        return "Definition{" +
                 "definition='" + definition + '\'' +
                 ", image_url'" + image_url + '\'' +
                 ", example='" + example + '\'' +

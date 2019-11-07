@@ -10,7 +10,6 @@
         android:id="@+id/enter_word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="@string/enter_word"
         android:inputType="textPersonName"
@@ -44,12 +43,26 @@
 
     <ImageView
         android:id="@+id/word_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="83dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/word_definition"
-        tools:srcCompat="@tools:sample/avatars[0]" />
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="218dp"
+        android:layout_height="173dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginRight="105dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>
