@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     Button searchButton;
     EditText enterWord;
     TextView wordDefinition;
+    TextView mPronunciation;
     ImageView wordImage;
     ProgressBar loading;
 
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         enterWord = findViewById(R.id.enter_word);
         wordDefinition = findViewById(R.id.word_definition);
         wordImage = findViewById(R.id.word_image);
+        mPronunciation = findViewById(R.id.pronunciation);
         loading = findViewById(R.id.progressBar);
 
         setSearchEnabled(true);
@@ -89,6 +91,13 @@ public class MainActivity extends AppCompatActivity {
                 if(wordResponse != null && wordResponse.definitions.length >= 1) {
                     wordDefinition.setText(wordResponse.definitions[0].definition);
                     String imageURL = wordResponse.definitions[0].image_url;
+                    String pronounciation = wordResponse.pronunciation;
+                    if (pronounciation == null || pronounciation.isEmpty()) {
+                        mPronunciation.setVisibility(GONE);
+                    } else {
+                        mPronunciation.setVisibility(View.VISIBLE);
+                        mPronunciation.setText(pronounciation);
+                    }
                     if (imageURL == null || imageURL.isEmpty()) {
                         wordImage.setVisibility(GONE);
                     } else {

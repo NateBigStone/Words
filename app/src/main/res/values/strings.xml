@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Words</string>
     <string name="search">Search!</string>
-    <string name="definiiton_shown_here">Definiiton Shown Here</string>
+    <string name="definition_shown_here">Definition Shown Here</string>
+    <string name="pronunciation_shown_here">Pronunciation Shown Here</string>
     <string name="enter_word">Enter Word</string>
 </resources>
